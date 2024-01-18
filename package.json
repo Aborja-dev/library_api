@@ -4,7 +4,8 @@
   "description": "![Logo del Proyecto]",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +13,12 @@
   "dependencies": {
     "express": "4.18.2",
     "mysql2": "3.7.0",
-    "sequelize": "6.35.2"
+    "sequelize": "6.35.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
   },
   "devDependencies": {
     "nodemon": "3.0.3",
