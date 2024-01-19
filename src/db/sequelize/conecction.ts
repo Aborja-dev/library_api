@@ -3,13 +3,13 @@ import config from './config.js';
 
 
 const sequelize = new Sequelize(
-  config.database,
-  config.username,
-  config.password, {
-  host: config.host,
+  'library_app',
+  'root',
+  '1234', {
+  host: 'localhost',
   // one of our supported dialects:
   // 'mysql', 'mariadb', 'postgres', 'mssql', 'sqlite', 'snowflake', 'db2' or 'ibmi'
-  dialect: config.dialect
+  dialect: 'mysql'
 });
 
 export default sequelize

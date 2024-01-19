@@ -45,7 +45,8 @@ const LIBROS = [
         "descripcion": "A tale of wealth, love, and the American Dream"
     }
 ]
-console.log()
+import { LIBROS as librosJson } from "../data/data.json";
+console.log(librosJson)
 /// OBTENER UNA LISTA DE LIBROS
 // filtrar por autor o genero
 const modelBook = new Book(LIBROS)
@@ -88,7 +89,7 @@ router.post('/', async (req, res) => {
 })
 // ACTUALIZARL LIBRO
 router.patch('/:id', async (req, res) => {
-    const { id } = req.params.id
+    const id  = Number(req.params.id)
     if (id == 1) {
         res.status(404).json({ message: 'No se encontro el libro' })
     } else {
@@ -107,7 +108,7 @@ router.patch('/:id', async (req, res) => {
 })
 // BORRAR LIBRO
 router.delete('/:id', async (req, res) => {
-    const { id } = req.params.id
+    const id = Number(req.params.id)
     if (id == 1) {
         res.status(404).json({ message: 'No s eencontro el libro' })
     } else {
