@@ -1,7 +1,7 @@
 import express, { json, urlencoded } from 'express';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
-import  {router as bookRouter} from './routes/book.routes.js'
+import  {router as bookRouter} from './routes/book.routes'
 
 
 export const app = express();

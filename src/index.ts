@@ -1,7 +1,6 @@
-import { app } from "./app.js"
+import { app } from './app'
 
-app.listen(3000, async () => {
+app.listen(3000, () => {
   // sequelize.authenticate()
   console.log('server running on port 3000')
 })
-
