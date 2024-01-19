@@ -11,6 +11,7 @@ export type searchParams = {
     autor?: IBook['autor'],
     genero?: IBook['genero']
 }
+export type ID = IBook[ID]
 export interface Resena {
     id:         number;
     libro_id:   number;

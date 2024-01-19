@@ -48,17 +48,17 @@ describe('get books endpoint', async () => {
         test('200 - OK', async () => {
             await supertest(app)
                 .get(`${baseUrl}/books`)
-                .query({ genre: 'Garcia' })
+                .query({ author: 'Suzanne' })
                 .expect(200)
                 .expect('Content-Type', /json/)
         })
         test('return array of books', async () => {
             const response = await supertest(app)
                 .get(`${baseUrl}/books`)
-                .query({ author: 'Gabriel' })
+                .query({ author: 'Suzanne' })
             const books = response.body.result
             expect(
-                books.every((book: IBook) => book.autor.includes('Gabriel'))
+                books.every((book: IBook) => book.autor.includes('Suzanne'))
             ).toBe(true)
         })
     })

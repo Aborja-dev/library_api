@@ -1,54 +1,26 @@
-import { IBook } from './../service/schema/Books.d';
 import { Request, Response, Router } from 'express';
-import { Book } from '../service/Book';
+import { BookController } from '../controller/Book';
 export const router = Router();
 
-import { LIBROS  } from "../data/data.json";
+
 
 /// OBTENER UNA LISTA DE LIBROS
 // filtrar por autor o genero
-const modelBook = new Book(LIBROS)
-type failedResponse = {success: false, message: string}
-type searchResponse = {success: true, result: IBook[] | IBook} | failedResponse
-router.get('/', async (req: Request, res: Response): Promise<Response<searchResponse>> => {
-    const books = modelBook.books
-    const { author, genre } = req.query
-    if (author) {
-        const filteredBooks = books.filter((book) => book.autor.includes('Gabriel'))
-        const responseJson :searchResponse = { success: true, result: filteredBooks }
-        return res.json(responseJson)
-    }
-    if (genre) {
-        const filteredBooks = books.filter((book) => book.genero.includes('Dystopian'))
-        const responseJson :searchResponse = { success: true, result: filteredBooks }
-        return res.json(responseJson)
-    }
-        const responseJson :searchResponse = { success: true, result: books }
-        return res.json(responseJson)
-})
+
+router.get('/', BookController.searchByQuery)
 // BUSCAR POR ID
 
-router.get('/:id', async (req: Request, res: Response): Promise<Response<searchResponse>> => {
-    const bookId = Number(req.params.id)
-    const book = modelBook.books.find((book) => book.id === bookId)
-    if (book) {
-        const responseJson :searchResponse = { success: true, result: book }
-        return res.json(responseJson)
-    } else {
-        const responseJson :searchResponse = { success: false, message: 'no se encontro el libro' }
-        return res.json(responseJson)
-    }
-})
+router.get('/:id', BookController.getById)
 
 // CREAR UN LIBRO
 router.post('/', async (req: Request, res: Response) => {
 
-    const newBook = modelBook.create(req.body)
+    /* const newBook = modelBook.create(req.body)
     if (newBook) {
         res.json({ newBook })
     } else {
         res.status(400)
-    }
+    } */
 
 })
 // ACTUALIZARL LIBRO
