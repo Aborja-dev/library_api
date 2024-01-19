@@ -12,12 +12,9 @@ export class Book {
         const filteredByAutor = this.books.filter((book) => book.autor.includes('Gabriel'))
     }
     if (genero) {
-        const filteredByGenero = books.filter((book) => book.genero.includes('Dystopian'))
-        const responseJson :searchResponse = { success: true, result: filteredBooks }
-        return res.json(responseJson)
+        return {}
     }
-        const responseJson :searchResponse = { success: true, result: books }
-        return res.json(responseJson)
+        return {}
     }
     create(input: createBook): IBook | null {
         if (input.hasOwnProperty('titulo')) {
