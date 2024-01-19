@@ -1,0 +1,82 @@
+{
+    "USERS": [
+        {
+            "id": 4,
+            "name": "Alice Johnson",
+            "email": "alice.johnson@example.com",
+            "age": 30
+        },
+        {
+            "id": 5,
+            "name": "Robert Williams",
+            "email": "robert.williams@example.com",
+            "age": 35
+        },
+        {
+            "id": 6,
+            "name": "Emily Davis",
+            "email": "emily.davis@example.com",
+            "age": 27
+        }
+    ],
+    "LIBROS": [
+        {
+            "id": 2,
+            "titulo": "Cien años de soledad",
+            "autor": "Gabriel García Márquez",
+            "genero": "Realismo mágico",
+            "descripcion": "Una obra maestra de la literatura latinoamericana"
+        },
+        {
+            "id": 3,
+            "titulo": "The Hobbit",
+            "autor": "J.R.R. Tolkien",
+            "genero": "Fantasy",
+            "descripcion": "A classic tale of adventure in Middle-earth"
+        },
+        {
+            "id": 4,
+            "titulo": "To Kill a Mockingbird",
+            "autor": "Harper Lee",
+            "genero": "Fiction",
+            "descripcion": "A powerful exploration of justice and morality in the American South"
+        },
+        {
+            "id": 5,
+            "titulo": "1984",
+            "autor": "George Orwell",
+            "genero": "Dystopian",
+            "descripcion": "A chilling vision of a totalitarian future"
+        },
+        {
+            "id": 7,
+            "titulo": "Los juegos del Hambre",
+            "autor": "Suzanne Collins",
+            "genero": "Dystopian",
+            "descripcion": "A powerful exploration of justice and morality in the American South"
+        },
+        {
+            "id": 6,
+            "titulo": "The Great Gatsby",
+            "autor": "F. Scott Fitzgerald",
+            "genero": "Classic",
+            "descripcion": "A tale of wealth, love, and the American Dream"
+        }
+    ],
+    "RESENAS": [
+        {
+            "id": 2,
+            "libro_id": 2,
+            "usuario_id": 4,
+            "puntuacion": 9.0,
+            "comentario": "Una historia fascinante, llena de magia y realismo."
+        },
+        {
+            "id": 3,
+            "libro_id": 3,
+            "usuario_id": 5,
+            "puntuacion": 8.5,
+            "comentario": "The Hobbit es un viaje épico que nunca olvidaré."
+        }
+    ]
+}
