@@ -7,4 +7,4 @@ class Book {
     }
 }
 
-module.exports = User
+export default User

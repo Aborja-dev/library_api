@@ -7,4 +7,4 @@ class Review {
     }
 }
 
-module.exports = Review
+export default Review

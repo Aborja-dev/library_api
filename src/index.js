@@ -1,5 +1,4 @@
-const app = require("./app")
-const sequelize = require("./db/sequelize/conecction")
+import { app } from "./app.js"
 
 app.listen(3000, async () => {
   // sequelize.authenticate()

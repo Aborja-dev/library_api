@@ -1,15 +1,15 @@
-const { Sequelize } = require('sequelize')
-const config = require('./config.js')
+import { Sequelize } from 'sequelize';
+import config from './config.js';
 
 
 const sequelize = new Sequelize(
-    config.database, 
-    config.username,
-    config.password, {
-    host: config.host,
-    // one of our supported dialects:
-    // 'mysql', 'mariadb', 'postgres', 'mssql', 'sqlite', 'snowflake', 'db2' or 'ibmi'
-    dialect: config.dialect
-  });
+  config.database,
+  config.username,
+  config.password, {
+  host: config.host,
+  // one of our supported dialects:
+  // 'mysql', 'mariadb', 'postgres', 'mssql', 'sqlite', 'snowflake', 'db2' or 'ibmi'
+  dialect: config.dialect
+});
 
-  module.exports = sequelize
+export default sequelize

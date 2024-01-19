@@ -1,14 +1,14 @@
 // El service es una clase que interactua con el modelo y el controlador sirve como una capa media para abstreaer la aprte de la base de datos
 
-class Book {
+export class Book {
     books = []
-    constructor (books) {
+    constructor(books) {
         this.books = books
     }
-    create (input) {
+    create(input) {
         if (input.hasOwnProperty('titulo')) {
             return {
-                id: this.books.length +1 ,
+                id: this.books.length + 1,
                 ...input
             }
         } else {
@@ -16,5 +16,3 @@ class Book {
         }
     }
 }
-
-module.exports = Book
