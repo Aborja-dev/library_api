@@ -1,0 +1,155 @@
+{
+    "BOOKS": [
+        {
+            "id": 1,
+            "title": "Libro 1",
+            "author": "Autor 1",
+            "pages": 100,
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "rate": "3.0",
+            "reviews": [
+                {
+                    "id": 1,
+                    "book": 1,
+                    "user": 1,
+                    "rate": 3.2,
+                    "comment": "Lorem ipsum dolor sit amet.",
+                    "created_at": "2024-01-29T08:00:00Z",
+                    "uuid": "abc123"
+                },
+                {
+                    "id": 2,
+                    "book": 1,
+                    "user": 2,
+                    "rate": 4.5,
+                    "comment": "Consectetur adipiscing elit.",
+                    "created_at": "2024-01-28T14:30:00Z",
+                    "uuid": "def456"
+                },
+                {
+                    "id": 3,
+                    "book": 1,
+                    "user": 3,
+                    "rate": 2.8,
+                    "comment": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "created_at": "2024-01-27T12:45:00Z",
+                    "uuid": "ghi789"
+                }
+            ],
+            "created_at": "2024-01-29T12:00:00Z",
+            "genre": ["Ficción", "Romance"]
+        },
+        {
+            "id": 2,
+            "title": "Libro 2",
+            "author": "Autor 2",
+            "pages": 150,
+            "summary": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "rate": "4.5",
+            "reviews": [
+                {
+                    "id": 4,
+                    "book": 2,
+                    "user": 1,
+                    "rate": 5.0,
+                    "comment": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    "created_at": "2024-01-26T09:15:00Z",
+                    "uuid": "jkl012"
+                },
+                {
+                    "id": 5,
+                    "book": 2,
+                    "user": 2,
+                    "rate": 3.7,
+                    "comment": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    "created_at": "2024-01-25T18:20:00Z",
+                    "uuid": "mno345"
+                }
+            ],
+            "created_at": "2024-01-30T10:30:00Z",
+            "genre": ["Misterio", "Terror"]
+        },
+        {
+            "id": 3,
+            "title": "Libro 3",
+            "author": "Autor 3",
+            "pages": 200,
+            "summary": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "rate": "5.0",
+            "reviews": [
+                {
+                    "id": 6,
+                    "book": 3,
+                    "user": 3,
+                    "rate": 4.2,
+                    "comment": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    "created_at": "2024-01-24T15:30:00Z",
+                    "uuid": "pqr678"
+                }
+            ],
+            "created_at": "2023-11-01T15:45:00Z",
+            "genre": ["Ciencia Ficción", "Fantasía"]
+        },
+        {
+            "id": 4,
+            "title": "Libro 4",
+            "author": "Autor 4",
+            "pages": 120,
+            "summary": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "rate": "4.2",
+            "reviews": [
+                {
+                    "id": 7,
+                    "book": 4,
+                    "user": 1,
+                    "rate": 3.8,
+                    "comment": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+                    "created_at": "2024-01-23T11:45:00Z",
+                    "uuid": "stu901"
+                }
+            ],
+            "created_at": "2023-11-05T08:20:00Z",
+            "genre": ["Aventura", "Accion"]
+        },
+        {
+            "id": 5,
+            "title": "Libro 5",
+            "author": "Autor 5",
+            "pages": 180,
+            "summary": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "rate": "3.8",
+            "reviews": [
+                {
+                    "id": 8,
+                    "book": 5,
+                    "user": 2,
+                    "rate": 4.0,
+                    "comment": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+                    "created_at": "2024-01-22T09:00:00Z",
+                    "uuid": "vwx234"
+                },
+                {
+                    "id": 9,
+                    "book": 5,
+                    "user": 3,
+                    "rate": 3.5,
+                    "comment": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+                    "created_at": "2024-01-21T16:30:00Z",
+                    "uuid": "yzab567"
+                },
+                {
+                    "id": 10,
+                    "book": 5,
+                    "user": 1,
+                    "rate": 4.8,
+                    "comment": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+                    "created_at": "2024-01-20T14:15:00Z",
+                    "uuid": "cdef890"
+                }
+            ],
+            "created_at": "2023-11-10T14:10:00Z",
+            "genre": ["Romance", "Terror"]
+        }
+    ]
+    
+}
