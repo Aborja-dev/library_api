@@ -1,5 +1,7 @@
-import data  from '../../data/users.json' with { type: "json" }
+import data from "../../data/index.js";
 import jwt from 'jsonwebtoken'
+import _ from 'lodash'
+import { verifyUser, findUserById, getNews, setNewGenres } from "../utils/helpers.js";
 export const UserController = {
     register: async (req, res) => {
         // TODO el username debe de ser unico
@@ -16,21 +18,21 @@ export const UserController = {
             news: news || false
         }
         data.USERS.push(newUser)
-        res.status(200).json({newUser, users: data.USERS})
+        res.status(200).json({ newUser, users: data.USERS })
     },
     login: async (req, res) => {
-        const {username, password} = req.body 
+        const { username, password } = req.body
         // encontrar usuario
-        const credentials = {username, password}
-        const verify = verifyUser({credentials})
+        const credentials = { username, password }
+        const verify = verifyUser({ credentials })
         if (!verify) {
-            return res.status(400).json({message: 'username or password are incorrect'})
+            return res.status(400).json({ message: 'username or password are incorrect' })
         }
         const user = verify
-        const { news } = req.body
-        const reccomendations = []
+        const { news } = user
+        let reccomendations = []
         if (news) {
-            const now = Date.now()
+            reccomendations = getNews({ days:30, genres: user.favoritesGenres })
         }
         // generar token
         const tokenPayload = {
@@ -42,16 +44,13 @@ export const UserController = {
             token,
             reccomendations
         })
+    },
+    update: async (req, res) => {
+        const id = req.params.userid
+        const newGenres = req.body.genres
+        let user = findUserById({ id })
+        user = setNewGenres({ user, genres: newGenres })
+        return res.status(200).json(user)
     }
 }
 
-const verifyUser = ({credentials}) => {
-    const {username, password} = credentials
-    const users = data.USERS
-    const userIndex = users.findIndex(user => user.username === username)
-    if (userIndex === -1) return false
-    const user = users[userIndex]
-    const comparePassword = user.password === password
-    if (!comparePassword) return false
-    return user
-}

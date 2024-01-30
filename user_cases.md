@@ -1,10 +1,10 @@
 **Historia de Usuario 1: Encontrando Recomendaciones**
 
 *Criterios de Aceptación:*
-1. El usuario puede indicar sus preferencias iniciales de género literario.
-2. La aplicación proporciona recomendaciones de libros populares en base a las preferencias del usuario.
-3. Se pueden explorar y filtrar las recomendaciones por diferentes géneros.
-4. El usuario puede marcar libros recomendados como "Por Leer" para su seguimiento.
+✔ 1. El usuario puede indicar sus preferencias iniciales de género literario.
+✔ 2. La aplicación proporciona recomendaciones de libros populares en base a las preferencias del usuario.
+✔ 3. Se pueden explorar y filtrar las recomendaciones por diferentes géneros.
+✔ 4. El usuario puede marcar libros recomendados como "Por Leer" para su seguimiento.
 
 ---
 
