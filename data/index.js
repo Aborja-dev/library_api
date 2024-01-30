@@ -6,5 +6,6 @@ import listJSON from "./lists.json" with { type: "json" };
 export default {
     users: usersJSON.USERS,
     books: bookssJSON.BOOKS,
-    lists: listJSON.LISTS
+    lists: listJSON.LISTS,
+    reviews: reviewsJSON.REVIEWS
 }
