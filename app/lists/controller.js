@@ -29,8 +29,11 @@ export const ListController = {
         let list = lists.find(list => list.id === listId) ?? null
         if (!list) return res.status(400).json({message: 'list not found'})
         const {book} = req.body
-        
-        list.books.push({book})
+        const newBook = {
+            ...book,
+            status: 'Por leer'
+        }
+        list.books.push(newBook)
         return res.status(200).json(list)
     }
 
