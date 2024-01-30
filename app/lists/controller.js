@@ -2,17 +2,22 @@ import data from "../../data/index.js";
 const lists = data.lists
 export const ListController = {
     update: async (req, res) => {
+        // obtener la lista
         const listId = Number(req.params.listId)
-        let list = lists.find(list => list.id === listId) ?? null
         let listIndex = lists.findIndex(list => list.id === listId) ?? null
-        if (!list) return res.status(400).json({message: 'list not found'})
+        // si no se encuentra lista retornar error
+        if (listIndex === -1) return res.status(400).json({message: 'list not found'})
+        // obtienne la lista y el input
+        let list = lists[listIndex]
         const {input} = req.body
+        // actualiza el estatus de los libros
         const newListBooks = list.books.map((book) => {
             const finded = input.find(([id]) => id == book.id)
             if (finded) {
-                return { ...book, status: finded[1]}
+                return { ...book, status: finded[1]} // remplaza el status
             } else return book
         })
+        // crea una nueva lista
         const newList = {
             ...list,
             books: newListBooks
@@ -24,6 +29,7 @@ export const ListController = {
         lists[listIndex] = newList
         return res.status(200).json(response)
     },
+    // Agrega un libro
     add: async (req, res) => {
         const listId = Number(req.params.listId)
         let list = lists.find(list => list.id === listId) ?? null
@@ -34,6 +40,16 @@ export const ListController = {
             status: 'Por leer'
         }
         list.books.push(newBook)
+        return res.status(200).json(list)
+    },
+    remove: async (req, res) => {
+        const listId = Number(req.params.listId)
+        const bookId = Number(req.params.bookId)
+        let list = lists.find(list => list.id === listId) ?? null
+        if (!list) return res.status(400).json({message: 'list not found'})
+        const index = list.books.findIndex((book) => book.id === bookId)
+        const newList = list.books.splice(index,1)
+        list = newList
         return res.status(200).json(list)
     }
 

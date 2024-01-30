@@ -11,10 +11,10 @@
 **Historia de Usuario 2: Dejando mi Opinión**
 
 *Criterios de Aceptación:*
-1. El usuario puede calificar un libro mediante un sistema de estrellas o una escala simple.
-2. Existe la opción de dejar un comentario o reseña de un libro.
-3. Las reseñas y calificaciones son visibles para otros usuarios en la plataforma.
-4. El usuario puede editar o eliminar sus propias reseñas.
+✔ 1. El usuario puede calificar un libro mediante un sistema de estrellas o una escala simple.
+✔ 2. Existe la opción de dejar un comentario o reseña de un libro.
+✔ 3. Las reseñas y calificaciones son visibles para otros usuarios en la plataforma.
+✔ 4. El usuario puede editar o eliminar sus propias reseñas.
 
 ---
 

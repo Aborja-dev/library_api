@@ -50,6 +50,8 @@ export const UserController = {
         const newGenres = req.body.genres
         let user = findUserById({ id })
         user = setNewGenres({ user, genres: newGenres })
+        const { news } = req.body
+        user.news = news
         return res.status(200).json(user)
     }
 }

@@ -20,7 +20,7 @@ export const findUserById = ({ id }) => {
 }
 
 
-export const getNews = ({ days = 30, genres }) => {
+export const getNews = ({ days = 30, genres, author }) => {
     const books = data.books
     const dayToMiliseconds = 1000*60*60*24
     const filteredBooks = books.filter((libro) => {
@@ -28,12 +28,21 @@ export const getNews = ({ days = 30, genres }) => {
         const fechaLibro = new Date(libro.created_at).getTime()
         return fechaLibro > fechaLimite
     })
-    const group = _.groupBy(filteredBooks, (libro) => {
-        const matchGenre = genres.find((genre) => libro.genre.includes(genre));
-        return matchGenre || "undefined";
-    });
-    const { undefined, ...list } = group
-    return list
+    if (genres) {
+        const group = _.groupBy(filteredBooks, (libro) => {
+            const matchGenre = genres.find((genre) => libro.genre.includes(genre));
+            return matchGenre || "undefined";
+        });
+        const { undefined, ...list } = group
+        return list
+    }
+    if (author) {
+        const group = _.groupBy(filteredBooks, (libro) => {
+            return libro.author || "undefined"
+        });
+        const { undefined, ...list } = group
+        return list
+    }
 }
 
 export const choiceFromArray = (array, count = 3) => {
