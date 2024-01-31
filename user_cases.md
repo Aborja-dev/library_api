@@ -21,29 +21,29 @@
 **Historia de Usuario 3: Organizando Mis Lecturas**
 
 *Criterios de Aceptación:*
-1. Los libros pueden ser marcados como "Leídos", "Por Leer" o "Favoritos".
-2. La lista de libros "Por Leer" se puede organizar y filtrar por diferentes criterios como género o autor.
-3. Existe la opción de mover libros entre las categorías de "Leídos", "Por Leer" y "Favoritos".
-4. El usuario puede eliminar libros de su lista en cualquier momento.
+✔ 1. Los libros pueden ser marcados como "Leídos", "Por Leer" o "Favoritos".
+✔ 2. La lista de libros "Por Leer" se puede organizar y filtrar por diferentes criterios como género o autor.
+✔ 3. Existe la opción de mover libros entre las categorías de "Leídos", "Por Leer" y "Favoritos".
+✔ 4. El usuario puede eliminar libros de su lista en cualquier momento.
 
 ---
 
 **Historia de Usuario 4: Notificaciones de Novedades**
 
 *Criterios de Aceptación:*
-1. El usuario puede activar o desactivar las notificaciones en la configuración de la aplicación.
-2. Las notificaciones informan sobre nuevos lanzamientos, eventos literarios y actualizaciones relevantes.
-3. Las notificaciones son claras y no intrusivas.
-4. La frecuencia de las notificaciones es ajustable por el usuario.
+✔ 1. El usuario puede activar o desactivar las notificaciones en la configuración de la aplicación.
+X 2. Las notificaciones informan sobre nuevos lanzamientos, eventos literarios y actualizaciones relevantes.
+F 3. Las notificaciones son claras y no intrusivas.
+✔ 4. La frecuencia de las notificaciones es ajustable por el usuario.
 
 ---
 
 **Historia de Usuario 5: Explorar por Género**
 
 *Criterios de Aceptación:*
-1. La aplicación presenta una sección de exploración por género.
-2. Los géneros son claramente definidos y fácilmente seleccionables.
-3. El usuario puede ver una lista de libros populares dentro de cada género.
-4. Existe la opción de buscar libros por género específico.
+✔ 1. La aplicación presenta una sección de exploración por género.
+F 2. Los géneros son claramente definidos y fácilmente seleccionables.
+✔ 3. El usuario puede ver una lista de libros populares dentro de cada género.
+✔ 4. Existe la opción de buscar libros por género específico.
 
 Estos criterios de aceptación detallan las funcionalidades y características específicas que deben implementarse para satisfacer las necesidades de los usuarios en cada historia de usuario.

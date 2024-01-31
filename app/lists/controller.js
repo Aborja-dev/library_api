@@ -29,7 +29,7 @@ export const ListController = {
         lists[listIndex] = newList
         return res.status(200).json(response)
     },
-    // Agrega un libro
+    // Agrega un libro a una lista
     add: async (req, res) => {
         const listId = Number(req.params.listId)
         let list = lists.find(list => list.id === listId) ?? null
@@ -51,6 +51,10 @@ export const ListController = {
         const newList = list.books.splice(index,1)
         list = newList
         return res.status(200).json(list)
+    },
+    getAll: async (req, res) => {
+        const {userId} = req.body
+        const user = data.users.find(user => user.id === userId)
+        return res.status(200).json(user.books)
     }
-
 }
