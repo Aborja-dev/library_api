@@ -1,0 +1,85 @@
+{
+    "BOOKS": [
+        {
+          "title": "El Secreto de las Mariposas Nocturnas",
+          "author": "Isabel García",
+          "pages": 220,
+          "summary": "En un mundo mágico, las mariposas nocturnas guardan secretos que cambiarán la vida de una pequeña aldea.",
+          "rate": 8.7,
+          "created_at": "2023-09-15T18:45:00Z"
+        },
+        {
+          "title": "El Viaje de las Sombras Perdidas",
+          "author": "Carlos Martínez",
+          "pages": 180,
+          "summary": "Acompaña a un héroe inesperado en su búsqueda para encontrar las sombras perdidas y restaurar el equilibrio del mundo.",
+          "rate": 7.9,
+          "created_at": "2023-11-20T10:30:00Z"
+        },
+        {
+          "title": "La Órbita de los Sueños",
+          "author": "Laura Pérez",
+          "pages": 320,
+          "summary": "Descubre una órbita mágica donde los sueños toman forma y se entrelazan en una danza etérea.",
+          "rate": 9.2,
+          "created_at": "2024-01-05T21:15:00Z"
+        },
+        {
+          "title": "El Jardín de las Imágenes Olvidadas",
+          "author": "Gabriel Sánchez",
+          "pages": 130,
+          "summary": "Explora un jardín encantado donde las imágenes olvidadas cobran vida y narran historias perdidas en el tiempo.",
+          "rate": 6.8,
+          "created_at": "2023-12-10T14:50:00Z"
+        },
+        {
+          "title": "Las Alas del Silencio",
+          "author": "Elena Rodríguez",
+          "pages": 280,
+          "summary": "Atrévete a volar con las alas del silencio, donde la magia se encuentra en los susurros de la naturaleza.",
+          "rate": 8.5,
+          "created_at": "2023-10-01T09:20:00Z"
+        },
+        {
+          "title": "El Eco de los Libros Olvidados",
+          "author": "Javier Fernández",
+          "pages": 150,
+          "summary": "Sumérgete en un mundo donde los libros olvidados susurran historias enterradas en el eco del pasado.",
+          "rate": 7.2,
+          "created_at": "2024-01-28T17:05:00Z"
+        },
+        {
+          "title": "El Enigma de la Luna Esmeralda",
+          "author": "Ana Martínez",
+          "pages": 420,
+          "summary": "Resuelve el enigma de la luna esmeralda y desvela secretos que cambiarán el destino de dos mundos entrelazados.",
+          "rate": 9.8,
+          "created_at": "2023-11-05T12:40:00Z"
+        },
+        {
+          "title": "El Susurro de las Olas Olvidadas",
+          "author": "Diego Gómez",
+          "pages": 110,
+          "summary": "Deja que el susurro de las olas olvidadas te guíe por un viaje melancólico en busca de tesoros perdidos.",
+          "rate": 6.5,
+          "created_at": "2023-10-18T20:55:00Z"
+        },
+        {
+          "title": "El Reflejo de los Días Eternos",
+          "author": "María López",
+          "pages": 380,
+          "summary": "Contempla el reflejo de los días eternos en un espejo mágico que revela las maravillas ocultas del universo.",
+          "rate": 9.5,
+          "created_at": "2024-01-15T08:10:00Z"
+        },
+        {
+          "title": "El Baile de las Estrellas Fugaces",
+          "author": "Alejandro Ramírez",
+          "pages": 170,
+          "summary": "Participa en el mágico baile de las estrellas fugaces y descubre los deseos que iluminan la noche.",
+          "rate": 7.0,
+          "created_at": "2023-12-25T15:25:00Z"
+        }
+      ]
+      
+}

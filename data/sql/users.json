@@ -1,0 +1,44 @@
+{
+    "USERS": [
+        {
+          "id": "1",
+          "username": "usuario1",
+          "password": "contraseña1",
+          "name": "Nombre de usuario 1",
+          "news": true,
+          "frecuency": 30
+        },
+        {
+          "id": "2",
+          "username": "usuario2",
+          "password": "contraseña2",
+          "name": "Nombre de usuario 2",
+          "news": true,
+          "frecuency": 60
+        },
+        {
+          "id": "3",
+          "username": "usuario3",
+          "password": "contraseña3",
+          "name": "Nombre de usuario 3",
+          "news": false,
+          "frecuency": 90
+        },
+        {
+          "id": "4",
+          "username": "usuario4",
+          "password": "contraseña4",
+          "name": "Nombre de usuario 4",
+          "news": true,
+          "frecuency": 30
+        },
+        {
+          "id": "5",
+          "username": "usuario5",
+          "password": "contraseña5",
+          "name": "Nombre de usuario 5",
+          "news": false,
+          "frecuency": 60
+        }
+      ]
+}

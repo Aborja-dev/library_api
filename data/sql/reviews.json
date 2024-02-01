@@ -1,0 +1,139 @@
+{
+    "REVIEWS": [
+        {
+          "id": 1,
+          "fk_book": 3,
+          "fk_user": 2,
+          "rate": 7.8,
+          "comment": "Me encantó este libro, la trama es fascinante y los personajes son muy bien desarrollados. Definitivamente, una lectura que recomendaría a cualquiera.",
+          "created_at": 1705761000000,
+          "uuid": "abc123"
+        },
+        {
+          "id": 2,
+          "fk_book": 8,
+          "fk_user": 5,
+          "rate": 4.5,
+          "comment": "No estoy seguro de por qué tantas personas elogian este libro. La historia es confusa y los personajes carecen de profund"id"ad. No lo recomendaría.",
+          "created_at": 1702629900000,
+          "uuid": "abc124"
+        },
+        {
+          "id": 3,
+          "fk_book": 6,
+          "fk_user": 1,
+          "rate": 9.2,
+          "comment": "¡Este libro es increíble! No puedo dejar de pensar en él. La narrativa es cautivadora y el final me dejó sin palabras. Definitivamente, uno de mis favoritos.",
+          "created_at": 1698952500000,
+          "uuid": "abc125"
+        },
+        {
+          "id": 4,
+          "fk_book": 2,
+          "fk_user": 3,
+          "rate": 6,
+          "comment": "Una lectura decente. La trama es predecible y algunos personajes son un poco cliché. No me impactó tanto como esperaba.",
+          "created_at": 1704880800000,
+          "uuid": "abc126"
+        },
+        {
+          "id": 5,
+          "fk_book": 5,
+          "fk_user": 4,
+          "rate": 8.5,
+          "comment": "Este libro me atrapó desde el principio. La escritura es hermosa y la historia te mantiene en vilo hasta el final. Definitivamente, una joya literaria.",
+          "created_at": 1696956300000,
+          "uuid": "abc127"
+        },
+        {
+          "id": 6,
+          "fk_book": 3,
+          "fk_user": 2,
+          "rate": 7.5,
+          "comment": "Me encantó este libro. La trama es cautivadora y los personajes son muy bien desarrollados. Definitivamente, lo recomendaría a mis amigos.",
+          "created_at": 1702909800000,
+          "uuid": "abc123"
+        },
+        {
+          "id": 7,
+          "fk_book": 7,
+          "fk_user": 4,
+          "rate": 5.8,
+          "comment": "No fue exactamente lo que esperaba, pero aún así tuvo momentos interesantes. El final dejó algunas preguntas sin respuesta.",
+          "created_at": 1704919500000,
+          "uuid": "def456"
+        },
+        {
+          "id": 8,
+          "fk_book": 5,
+          "fk_user": 1,
+          "rate": 9.2,
+          "comment": "Increíble. Este libro me atrapó desde la primera página. La narrativa es asombrosa, y el desenlace es simplemente brillante.",
+          "created_at": 1699186500000,
+          "uuid": "ghi789"
+        },
+        {
+          "id": 9,
+          "fk_book": 9,
+          "fk_user": 5,
+          "rate": 6.4,
+          "comment": "Una lectura decente. Algunos momentos fueron intrigantes, pero otros carecían de emoción. En general, fue una experiencia satisfactoria.",
+          "created_at": 1698220800000,
+          "uuid": "jkl012"
+        },
+        {
+          "id": 10,
+          "fk_book": 2,
+          "fk_user": 3,
+          "rate": 8.1,
+          "comment": "Me sorprendió gratamente. La trama tenía giros inesperados, y el estilo de escritura era cautivador. Definitivamente, lo leería de nuevo.",
+          "created_at": 1706461200000,
+          "uuid": "mno345"
+        },
+        {
+          "id": 11,
+          "fk_book": 8,
+          "fk_user": 1,
+          "rate": 4.7,
+          "comment": "No cumplió mis expectativas. La trama fue confusa en varios puntos y los personajes no lograron conectarme emocionalmente.",
+          "created_at": 1701768000000,
+          "uuid": "pqr678"
+        },
+        {
+          "id": 12,
+          "fk_book": 4,
+          "fk_user": 3,
+          "rate": 7.9,
+          "comment": "Una lectura intrigante. Los personajes estaban bien desarrollados y la historia mantenía mi interés de principio a fin.",
+          "created_at": 1700066700000,
+          "uuid": "stu901"
+        },
+        {
+          "id": 13,
+          "fk_book": 10,
+          "fk_user": 5,
+          "rate": 6,
+          "comment": "Me dejó pensando. La trama fue única, pero algunos elementos fueron difíciles de seguir. En general, fue una experiencia interesante.",
+          "created_at": 1705756200000,
+          "uuid": "vwx234"
+        },
+        {
+          "id": 14,
+          "fk_book": 1,
+          "fk_user": 2,
+          "rate": 8.3,
+          "comment": "Una obra maestra. La narrativa fluyó perfectamente, y los personajes eran cautivadores. Definitivamente, uno de mis favoritos.",
+          "created_at": 1696935300000,
+          "uuid": "yza567"
+        },
+        {
+          "id": 15,
+          "fk_book": 6,
+          "fk_user": 4,
+          "rate": 5.5,
+          "comment": "No fue para mí. La historia careció de emoción y los personajes no lograron captar mi interés. Puede que sea simplemente cuestión de gustos.",
+          "created_at": 1703788200000,
+          "uuid": "bcd890"
+        }
+      ]
+}
