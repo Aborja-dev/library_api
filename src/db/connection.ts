@@ -1,16 +1,10 @@
-import { Sequelize } from 'sequelize';
-
-
-// Option 3: Passing parameters separately (other dialects)
-const sequelize = new Sequelize('library_app', 'root', '1234', {
-  host: 'localhost',
-  dialect: 'mysql',
-  port: 3306,
-})
-
-export const createConnection = async () => {
+import { sequelize } from './config';
+import { Entities } from './schema';
+import { ConecctionConfig } from './types/types';
+Entities
+export const createConnection = async ({force}: ConecctionConfig = {force: false}) => {
     try {
-        await sequelize.authenticate();
+        await sequelize.sync({force});
         console.log('Connection has been established successfully.');
       } catch (error) {
         console.error('Unable to connect to the database:', error);

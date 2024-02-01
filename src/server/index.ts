@@ -2,12 +2,14 @@ import Express from "express";
 import cors from "cors"
 import morgan from "morgan";
 import { AppConfig } from "src/types/app.s";
+import { userRouter } from "../user/user.routes";
 
 export const app = Express()
 app.use(cors())
 app.use(morgan('tiny'))
 app.use(Express.json())
 // 404 not found
+app.use('/user', userRouter)
 app.use('/', (req, res) => {
     return res.status(404).send('<h1>Page not found</h1>')
 })

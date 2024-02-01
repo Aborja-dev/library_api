@@ -6,7 +6,7 @@
           "password": "contraseña1",
           "name": "Nombre de usuario 1",
           "news": true,
-          "frecuency": 30
+          "frequency": 30
         },
         {
           "id": "2",
@@ -14,7 +14,7 @@
           "password": "contraseña2",
           "name": "Nombre de usuario 2",
           "news": true,
-          "frecuency": 60
+          "frequency": 60
         },
         {
           "id": "3",
@@ -22,7 +22,7 @@
           "password": "contraseña3",
           "name": "Nombre de usuario 3",
           "news": false,
-          "frecuency": 90
+          "frequency": 90
         },
         {
           "id": "4",
@@ -30,7 +30,7 @@
           "password": "contraseña4",
           "name": "Nombre de usuario 4",
           "news": true,
-          "frecuency": 30
+          "frequency": 30
         },
         {
           "id": "5",
@@ -38,7 +38,7 @@
           "password": "contraseña5",
           "name": "Nombre de usuario 5",
           "news": false,
-          "frecuency": 60
+          "frequency": 60
         }
       ]
 }

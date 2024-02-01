@@ -14,7 +14,7 @@
           "fk_book": 8,
           "fk_user": 5,
           "rate": 4.5,
-          "comment": "No estoy seguro de por qué tantas personas elogian este libro. La historia es confusa y los personajes carecen de profund"id"ad. No lo recomendaría.",
+          "comment": "No estoy seguro de por qué tantas personas elogian este libro. La historia es confusa y los personajes carecen de profundidad. No lo recomendaría.",
           "created_at": 1702629900000,
           "uuid": "abc124"
         },
