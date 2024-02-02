@@ -2,7 +2,10 @@ import { Router, Handler } from "express";
 import { Entities } from "../db/schema/index";
 import { User } from "src/db/schema/models/User.schema";
 import { LoginInput } from "./types";
-
+import { toDateTime, toTimestamp, milisecondsToDay } from "../utils/helpers";
+import { Op } from "sequelize";
+import { UserModel } from "src/db/types/types";
+import jwt from "jsonwebtoken";
 const router = Router()
 
 class UserSevice {
@@ -34,7 +37,11 @@ class UserSevice {
         console.log('se hizo una peticion a la base de datos')
         return resultPromise
     }
-    static login = async ({password, username}: LoginInput) => {
+    static login = async ({password, username}: LoginInput): Promise<UserModel | null> => {
+        const hasUser = await this.validateLogin({password, username})
+        return hasUser ?? null
+    }
+    private static  validateLogin = async ({password, username}: LoginInput): Promise<UserModel | null> => {
         const user = await Entities.User.findOne( { where: {
             username: username
         } } )
@@ -43,6 +50,26 @@ class UserSevice {
         if (!validatePassword) null
         return user
     }
+    get reccomendations () {
+        return this.user
+            .then((user: User) => user.frequency)
+            .then((frequency: number) => {
+                const now = Date.now() // tomamos la fecha de hoy
+                // la convertimos a timestamp para restar los dias
+                const datetime = toTimestamp(now) - (milisecondsToDay * frequency)
+                const rangeDate = toDateTime(datetime)
+                // buscamos los libros que esten en ese rango de fecha
+                return Entities.Book.findAll({
+                    where: {
+                        "created_at": {
+                            [Op.gt]: rangeDate
+                        }
+                    },
+                    attributes: [ 'title', 'author',]
+                })
+            })      
+    }
+
 }
 
 
@@ -57,10 +84,24 @@ class controller {
 
     static login: Handler = async (req, res) => {
         const {username, password} = req.body
-        const user = await UserSevice.login({username, password})
-        if (user?.news ) {
-            return res.status(200).json('recomendaciones')    
+        const user = await UserSevice.login({username, password}) as any
+        const service = new UserSevice({ id: user.id })
+        // generar token
+        const tokenPayload = {
+            username: user.username,
+            name: user.name
         }
+        const token = jwt.sign(tokenPayload, 'SECRET')
+        if (user?.news ) {
+            const books = await service.reccomendations
+            return res.status(200).json({
+                token,
+                reccomendations: books
+            })    
+        }
+        res.status(200).json({
+            token
+        })
         return res.status(200).json({user})
     }
 }
