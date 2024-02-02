@@ -1,7 +1,7 @@
 import Express from "express";
 import cors from "cors"
 import morgan from "morgan";
-import { AppConfig } from "src/types/app.s";
+import { AppConfig } from "../types/app";
 import { userRouter } from "../user/user.routes";
 
 export const app = Express()

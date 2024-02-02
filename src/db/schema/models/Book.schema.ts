@@ -1,6 +1,6 @@
 import { Model, DataTypes } from "sequelize";
 import { sequelize } from "../../config";
-import { IBookModel } from "src/db/types/types";
+import { IBookModel } from "../../types/types";
 
 export class Book extends Model implements IBookModel{
     title!: string;

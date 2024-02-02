@@ -1,6 +1,6 @@
 import { Model, DataTypes } from "sequelize";
 import { sequelize } from "../../config";
-import { IReviewModel } from "src/db/types/types";
+import { IReviewModel } from "../../types/types";
 
 export class Review extends Model implements IReviewModel {
     rate!: number;
