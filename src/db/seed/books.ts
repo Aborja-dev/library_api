@@ -20,7 +20,7 @@ const insertOneBook = async (book: Book) => {
      const newBook = await Entities.Book.create(book) as any
      const genres = await getGenres()
       newBook.setGenres(genres)
-     console.log(pc.green(`Libro ${newBook.title} insertado con éxito.`));
+     // console.log(pc.green(`Libro ${newBook.title} insertado con éxito.`));
   } catch (error: any) {
      console.error(pc.red(`Ocurrió un error al insertar el libro ${book.title}: ${error.message}`));
   }

@@ -3,8 +3,8 @@ import { seed } from "./db/seed";
 import { runApp } from "./server";
 
 const start = async () => {
-    await createConnection({force: false})
-    // await seed()
+    await createConnection({force: true})
+    await seed()
     runApp({ port: 3000 })
 }
 
