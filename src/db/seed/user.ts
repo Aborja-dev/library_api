@@ -8,14 +8,12 @@ import { QueryTypes } from "sequelize";
       for (let i = 0; i < USERS.length; i++) {
         const element = USERS[i];
         await insertOneUser(element)
-        // console.log(pc.blue('usuario cargado en la base de datos'))
       }
       
   } catch (error: any) {
       console.error('ocurrio un error al insertar usuarios', error.message)
   }
   }
-
   type User = {
     id: string;
     username: string;
