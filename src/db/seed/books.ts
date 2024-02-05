@@ -14,7 +14,7 @@ type Book = {
   rate: number;
   created_at: string;
 }
-const insertOneBook = async (book: Book) => { 
+export const insertOneBook = async (book: Book) => { 
   try {
      // Crear el libro e incluir la asociación de géneros
      const genres = getGenres()

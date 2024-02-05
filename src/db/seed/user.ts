@@ -1,8 +1,6 @@
 import { Entities } from "../schema"
 import { USERS } from "../../data/sql/users.json";
 import pc from "picocolors";
-import { sequelize } from "../config";
-import { QueryTypes } from "sequelize";
   export const fillUsers = async () => {
     try {
       for (let i = 0; i < USERS.length; i++) {
