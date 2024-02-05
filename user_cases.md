@@ -21,8 +21,8 @@ F✔ 3. Se pueden explorar y filtrar las recomendaciones por diferentes géneros
 **Historia de Usuario 3: Organizando Mis Lecturas**
 
 *Criterios de Aceptación:*
-✔ 1. Los libros pueden ser marcados como "Leídos", "Por Leer" o "Favoritos".
-✔ 2. La lista de libros "Por Leer" se puede organizar y filtrar por diferentes criterios como género o autor.
+✔✔ 1. Los libros pueden ser marcados como "Leídos", "Por Leer" o "Favoritos".
+✔✔ 2. La lista de libros "Por Leer" se puede organizar y filtrar por diferentes criterios como género o autor.
 ✔ 3. Existe la opción de mover libros entre las categorías de "Leídos", "Por Leer" y "Favoritos".
 ✔ 4. El usuario puede eliminar libros de su lista en cualquier momento.
 

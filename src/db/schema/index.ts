@@ -51,4 +51,5 @@ export const Entities = {
     Book,
     Review,
     List,
+    BookList
 } 
