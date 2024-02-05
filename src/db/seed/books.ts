@@ -17,19 +17,17 @@ type Book = {
 const insertOneBook = async (book: Book) => { 
   try {
      // Crear el libro e incluir la asociación de géneros
+     const genres = getGenres()
      const newBook = await Entities.Book.create(book) as any
-     const genres = await getGenres()
-      newBook.setGenres(genres)
-     // console.log(pc.green(`Libro ${newBook.title} insertado con éxito.`));
+     newBook.setGenres(genres)
   } catch (error: any) {
      console.error(pc.red(`Ocurrió un error al insertar el libro ${book.title}: ${error.message}`));
   }
  };
- const getGenres = async () => {
+ const getGenres = () => {
   const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   const choiceGenres = choiceFromArray(array, 3)
-  const genres = choiceGenres.map((genrePk: number) => Entities.Genre.findByPk(genrePk))
-  return await Promise.all(genres)
+  return choiceGenres
  }
 
  function choiceFromArray(array: any, n: any) {

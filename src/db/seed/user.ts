@@ -30,10 +30,7 @@ import { QueryTypes } from "sequelize";
        // Crear el usuario e incluir la asociación de géneros
        const _user = await Entities.User.create(user) as any
        const genres = getGenres()
-       for (let i = 0; i < genres.length; i++) {
-        const genre = genres[i];
-        await insertGenre([_user.id, genre])
-       }
+       _user.setGenres(genres)
        // console.log(pc.green(`Usuario ${user.name} insertado con éxito.`));
     } catch (error: any) {
        console.error(pc.red(`Ocurrió un error al insertar el usuar ${user.name}: ${error.message}`));
@@ -59,12 +56,3 @@ import { QueryTypes } from "sequelize";
     return shuffledArray.slice(0, n);
    }
 
-   const insertGenre = async ([user, genre]: any) => {
-    const query = 
-    `insert into user_genres (UserId,  GenreId )
-     values (?, ?);`
-    await sequelize.query(query, {
-      replacements: [user, genre],
-      type: QueryTypes.INSERT
-    })
-   }

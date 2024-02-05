@@ -4,6 +4,7 @@ import morgan from "morgan";
 import { AppConfig } from "../types/app";
 import { userRouter } from "../user/user.routes";
 import { reviewRouter } from "../reviews/review.routes";
+import { listRouter } from "../list/router";
 
 export const app = Express()
 app.use(cors())
@@ -12,6 +13,7 @@ app.use(Express.json())
 // 404 not found
 app.use('/user', userRouter)
 app.use('/review', reviewRouter)
+app.use('/list', listRouter)
 app.use('/', (req, res) => {
     return res.status(404).send('<h1>Page not found</h1>')
 })
