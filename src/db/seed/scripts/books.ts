@@ -1,5 +1,5 @@
-import { BOOKS } from "../../data/sql/books.json";
-import { Entities } from "../schema";
+import { BOOKS } from "../data/books.json";
+import { Entities } from "../../schema/index";
 import pc from "picocolors";
 
 export const fillBooks = async () => {

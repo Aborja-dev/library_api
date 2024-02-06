@@ -1,10 +1,10 @@
 import Express from "express";
 import cors from "cors"
 import morgan from "morgan";
-import { AppConfig } from "../types/app";
-import { userRouter } from "../user/user.routes";
-import { reviewRouter } from "../reviews/review.routes";
-import { listRouter } from "../list/router";
+import { AppConfig } from "./types/app";
+import { userRouter } from "../features/user/user.routes";
+import { reviewRouter } from "../features/reviews/review.routes";
+import { listRouter } from "../features/list/router";
 
 export const app = Express()
 app.use(cors())

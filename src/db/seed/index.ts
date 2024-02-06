@@ -1,9 +1,9 @@
 import { Entities } from "../schema"
-import { fillBooks } from "./books"
-import { fillGenres } from "./genres"
-import { fillReviews } from "./reviews"
-import { fillUsers } from "./user"
-
+import { fillBooks } from "./scripts/books"
+import { fillGenres } from "./scripts/genres"
+import { fillReviews } from "./scripts/reviews"
+import { fillUsers } from "./scripts/user"
+import pc from "picocolors";
 const entities = Object.values(Entities)
 export const seed = async () => {
     for (let i = 0; i < entities.length; i++) {
@@ -14,4 +14,5 @@ export const seed = async () => {
     await fillBooks()
     await fillUsers()
     await fillReviews()
+    console.log(pc.green('los datos han sido cargados con exito'))
 }

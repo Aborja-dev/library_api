@@ -17,7 +17,9 @@ specifiers:
   picocolors: 1.0.0
   sequelize: 6.35.2
   sequelize-cli: 6.6.2
+  ts-node: 10.9.2
   ts-node-dev: 2.0.0
+  tsconfig-paths: ^4.2.0
   typescript: 5.3.3
 
 dependencies:
@@ -39,7 +41,9 @@ devDependencies:
   nodemon: 3.0.3
   picocolors: 1.0.0
   sequelize-cli: 6.6.2
+  ts-node: 10.9.2_lhdqsdfeao56nox7exehqvn5ti
   ts-node-dev: 2.0.0_lhdqsdfeao56nox7exehqvn5ti
+  tsconfig-paths: 4.2.0
   typescript: 5.3.3
 
 packages:
@@ -973,6 +977,12 @@ packages:
       nopt: 7.2.0
     dev: true
 
+  /json5/2.2.3:
+    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
+    engines: {node: '>=6'}
+    hasBin: true
+    dev: true
+
   /jsonfile/6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
     dependencies:
@@ -1746,6 +1756,15 @@ packages:
       typescript: 5.3.3
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
+    dev: true
+
+  /tsconfig-paths/4.2.0:
+    resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
+    engines: {node: '>=6'}
+    dependencies:
+      json5: 2.2.3
+      minimist: 1.2.8
+      strip-bom: 3.0.0
     dev: true
 
   /tsconfig/7.0.0:

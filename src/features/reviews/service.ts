@@ -1,5 +1,5 @@
 import { randomUUID } from "crypto"
-import { Entities } from "../db/schema"
+import { Entities } from "../../db/schema/index"
 
 export class ReviewService {
     public static createOne = async (input: any) => {

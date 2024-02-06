@@ -1,6 +1,6 @@
 import { Router, Handler } from "express";
-import { Entities } from "../db/schema";
-import { sequelize } from "../db/config";
+import { Entities } from "../../db/schema";
+import { sequelize } from "../../db/config";
 import { Op } from "sequelize";
 
 const router = Router();

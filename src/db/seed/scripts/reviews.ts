@@ -1,5 +1,5 @@
-import { REVIEWS } from "../../data/sql/reviews.json";
-import { Entities } from "../schema";
+import { REVIEWS } from "../data/reviews.json";
+import { Entities } from "../../schema/index";
 import pc from "picocolors";
 
 export const fillReviews = async () => {

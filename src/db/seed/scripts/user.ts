@@ -1,5 +1,5 @@
-import { Entities } from "../schema"
-import { USERS } from "../../data/sql/users.json";
+import { Entities } from "../../schema/index";
+import { USERS } from "../data/users.json";
 import pc from "picocolors";
   export const fillUsers = async () => {
     try {

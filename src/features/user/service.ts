@@ -1,12 +1,12 @@
-import { Entities } from "../db/schema/index";
-import { User } from "../db/schema/models/User.schema";
 import { LoginInput, TokenPayload } from "./types";
-import { toDateTime, toTimestamp, milisecondsToDay } from "../utils/helpers";
 import { Op } from "sequelize";
-import { UserModel } from "../db/types/types";
 import jwt from "jsonwebtoken"
 import _ from "lodash";
-import { sequelize } from "../db/config";
+import { User } from "../../db/schema/models/User.schema";
+import { UserModel } from "../../db/types/types";
+import { milisecondsToDay, toDateTime, toTimestamp } from "../../utils/helpers";
+import { Entities } from "../../db/schema/index";
+
 
 export class UserSevice {
     private id: number
@@ -18,16 +18,16 @@ export class UserSevice {
         const hasUser = await this.validateLogin({ password, username })
         return hasUser ?? null
     }
-    get reccomendations () {
-            return this.user
+    get reccomendations() {
+        return this.user
             .then((user: User) => {
-                const { frequency} = user
+                const { frequency } = user
                 const now = Date.now() // tomamos la fecha de hoy
-                    // la convertimos a timestamp para restar los dias
+                // la convertimos a timestamp para restar los dias
                 const datetime = toTimestamp(now) - (milisecondsToDay * frequency)
                 const rangeDate = toDateTime(datetime)
                 const result = Entities.User.findAll({
-                    where: {id: this.id },
+                    where: { id: this.id },
                     attributes: [],
                     include: [{
                         model: Entities.Genre,
@@ -39,14 +39,14 @@ export class UserSevice {
                             through: { attributes: [] },
                             required: true,
                             attributes: ['title', 'author', 'summary', 'pages'],
-                            where: {'created_at': {[Op.gt]: rangeDate}}
+                            where: { 'created_at': { [Op.gt]: rangeDate } }
                         }]
                     }]
                 })
                 return result
             })
             .then(res => res[0].Genres)
-        } 
+    }
     get user() {
         if (this._user) {
             return this._user

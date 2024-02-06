@@ -1,4 +1,4 @@
-import { Entities } from "../schema";
+import { Entities } from "../../schema/index";
 import pc from "picocolors";
 const generosLibros = [
     {
